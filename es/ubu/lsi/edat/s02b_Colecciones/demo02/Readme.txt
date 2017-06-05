@@ -1,0 +1,2 @@
+Este ejemplo se ha obtenido del tutorial básico sobre el Aprendizaje del Lenguaje Java de Oracle.
+El código original es accesible en: https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/DataStructure.java 

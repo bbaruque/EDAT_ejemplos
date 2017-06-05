@@ -1,0 +1,2 @@
+Este ejemplo se ha obtenido del código fuente de los ejemplos del libro "Data Structures and Problem Solving Using Java (Fourth Edition)" by Mark Allen Weiss Published by Addison-Wesley, 2010 ISBN: 0-321-54140-5
+El código original es accesible en: https://users.cs.fiu.edu/~weiss/dsj4/code/code.html 
