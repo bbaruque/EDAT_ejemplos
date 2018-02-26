@@ -27,7 +27,8 @@ public class TestRendimientoSimple {
 
 	// Numero maximo de elementos que se quiere probar a trabajar
 	int limiteElementos = 10000;
-	// Numero de mediciones que se quieren obtener por cada prueba
+	// Numero de elementos en el que se quiere aunmentar el tamaño en cada paso
+	// Se propone obtener 10 mediciones diferentes por cada experimento
 	int paso = limiteElementos/10;
 	
 	// Lista sobre la que se trabajará
@@ -77,7 +78,7 @@ public class TestRendimientoSimple {
 			listaTrabajo2 = this.listaAleatoria(i);
 			
 			// Se asegura que al menos tienen un elemento en comun
-			listaTrabajo2.set(i/2, listaTrabajo1.get(0));
+			listaTrabajo2.set(i/2, listaTrabajo1.get(i/2));
 			
 			inicio = System.currentTimeMillis();
 			boolean dis = Collections.disjoint(listaTrabajo1, listaTrabajo2);
@@ -88,7 +89,7 @@ public class TestRendimientoSimple {
 			/*
 			 *  Se puede comprobar como a pesar de ser exactamente el mismo método,
 			 *  cuando se comprueba que 2 colecciones NO son DISJUNTAS, se tarda siempre
-			 *  un tiempo mucho menor que en comprobar que S�? lo son. 
+			 *  un tiempo mucho menor que en comprobar que SI lo son. 
 			 *  
 			 *  En el primer caso, basta con encontrar un elemento que NO SEA coincidente en ambas.
 			 *  En el segundo, hace falta comprobar TODOS los elementos.
@@ -107,6 +108,9 @@ public class TestRendimientoSimple {
 	* Se repiten los dos tests que vemos arriba solamente incrementando el numero de elementos
 	* que se incluyen en ambas listas. De esta forma, se puede comprobar la progresión del tiempo
 	* que se tarda en finalizar cada test en función del tamaño de las estructuras empleadas.
+	* 
+	* Permite aumentar el tamaño de las observaciones hasta que nos encontramos con una tamaño
+	* suficientemente grande como para apreciar claramente la diferencia en tiempo. 
 	*/
 	@Test 
 	public void testIncremental(){
@@ -128,7 +132,7 @@ public class TestRendimientoSimple {
 	/**
 	 * Permite generar una lista de enteros aleatorios del tamaño solicitado.
 	 * 
-	 * Los numeros generdos estarán en el rango del 0 al tamaño solicitado.
+	 * Los numeros generdos estarán en el rango del 0 al tamaño solicitado * 1,5.
 	 * Se asegura que no habrá elementos duplicados en la lista generada. 
 	 * 
 	 * @param tamano
@@ -136,19 +140,14 @@ public class TestRendimientoSimple {
 	 */
 	private List<Integer> listaAleatoria (int tamano){
 		
-		Set<Integer> aleatoria = new HashSet<Integer>();
+		List<Integer> lista = new ArrayList<>(tamano);
 		
-		while(aleatoria.size() < tamano){
-			
-			int aleat = (int) (Math.random()*(tamano*10));
-			aleatoria.add(aleat);
-			
+		for(int i=0; i<tamano*1.5; i++) {
+			lista.add(i);
 		}
 		
-		List<Integer> lista = new ArrayList<Integer>(tamano);
-		lista.addAll(aleatoria);
-		
-		return  lista;
+		Collections.shuffle(lista);
+		return lista.subList(0, tamano);
 		
 	}
 	
