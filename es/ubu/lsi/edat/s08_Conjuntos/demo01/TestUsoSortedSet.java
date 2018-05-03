@@ -2,7 +2,7 @@ package es.ubu.lsi.edat.s08_Conjuntos.demo01;
 
 import java.util.TreeSet;
 
-public class OperacionesSortedSet {
+public class TestUsoSortedSet {
 
 	public static void main(String[] args)	{
 		
