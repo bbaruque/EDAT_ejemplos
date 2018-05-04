@@ -1,6 +1,5 @@
 package es.ubu.lsi.edat.s08_Conjuntos.demo04;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -17,7 +16,7 @@ import java.util.TreeSet;
 public class ComplejidadBusqueda {
 
 	private static final int tamMax = 1000000; 
-	private static final int numMediciones = 50;
+	private static final int numMediciones = 20;
 
 	private static List<Integer> lista = new LinkedList<>();
 	private static Set<Integer> tabla = new HashSet<>();
@@ -51,16 +50,19 @@ public class ComplejidadBusqueda {
 			llenaColecciones(i);
 
 			Long iniL = System.nanoTime();
-			assert true == lista.contains(i-1);
+			boolean contenido = lista.contains(i-1);
 			Long endL = System.nanoTime();
+			assert contenido;
 
 			Long iniT = System.nanoTime();
-			assert true == tabla.contains(i-1);
+			contenido = tabla.contains(i-1);
 			Long endT = System.nanoTime();
+			assert contenido;
 
 			Long iniA = System.nanoTime();
-			assert true == arbol.contains(i-1);
+			contenido = arbol.contains(i-1);
 			Long endA = System.nanoTime();
+			assert contenido;
 
 			System.out.println(i+", "+(endL-iniL)+", "+(endT-iniT)+", "+(endA-iniA));
 
@@ -90,16 +92,19 @@ public class ComplejidadBusqueda {
 			llenaColecciones(i);
 
 			Long iniL = System.nanoTime();
-			assert false == lista.contains(i+50);
+			boolean contenido = lista.contains(i+50);
 			Long endL = System.nanoTime();
-
+			assert (contenido == false);
+			
 			Long iniT = System.nanoTime();
-			assert false == tabla.contains(i+50);
+			contenido = tabla.contains(i+50);
 			Long endT = System.nanoTime();
+			assert (contenido == false);
 
 			Long iniA = System.nanoTime();
-			assert false == arbol.contains(i+50);
+			contenido = arbol.contains(i+50);
 			Long endA = System.nanoTime();
+			assert (contenido == false);
 
 			System.out.println(i+", "+(endL-iniL)+", "+(endT-iniT)+", "+(endA-iniA));
 
