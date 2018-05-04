@@ -1,5 +1,5 @@
-Busqueda elem NO existe
-Tamaño,lista,mapa,arbol
+#Busqueda elem NO existe
+tamano,lista,mapa,arbol
 0, 156317, 168948, 2369
 100000, 6378599, 6711, 9474
 200000, 3739764, 7895, 10658

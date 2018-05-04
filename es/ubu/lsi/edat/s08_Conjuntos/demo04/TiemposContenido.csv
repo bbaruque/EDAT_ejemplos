@@ -1,5 +1,5 @@
-Busqueda elem SÍ existe
-Tamaño,lista,mapa,arbol
+#Busqueda elem SÍ existe
+tamano,lista,mapa,arbol
 0, 69474, 18553, 9473
 100000, 4055950, 49737, 127896
 200000, 5932938, 38685, 11448

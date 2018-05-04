@@ -3,6 +3,7 @@ package es.ubu.lsi.edat.s08_Conjuntos.demo04;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
@@ -16,9 +17,9 @@ import java.util.TreeSet;
 public class ComplejidadBusqueda {
 
 	private static final int tamMax = 1000000; 
-	private static final int numMediciones = 10;
+	private static final int numMediciones = 50;
 
-	private static List<Integer> lista = new ArrayList<>();
+	private static List<Integer> lista = new LinkedList<>();
 	private static Set<Integer> tabla = new HashSet<>();
 	private static SortedSet<Integer> arbol = new TreeSet<>();
 
@@ -30,35 +31,35 @@ public class ComplejidadBusqueda {
 	}
 
 	/**
-	 * Se pretende comparar la complejidad algorítmica entre realizar una busqueda
+	 * Se pretende comparar la complejidad algorï¿½tmica entre realizar una busqueda
 	 * por un elemento en:
 	 * 
 	 * - Lista
 	 * - Set implementado como Tabla Hash
 	 * - Set implementado como Arbol Binario de Busqueda
 	 * 
-	 *  Se busca por un elemento que estará contenido en la colección
-	 *  (tiene menos complejidad que el que NO está)
+	 *  Se busca por un elemento que estarï¿½ contenido en la colecciï¿½n
+	 *  (tiene menos complejidad que el que NO estï¿½)
 	 */
 	private static void contieneExiste() {
 
-		System.out.println("Busqueda elem SÍ existe");
-		System.out.println("Tamaño,lista,mapa,arbol");
+		System.out.println("Busqueda elem SI existe");
+		System.out.println("tamano,lista,mapa,arbol");
 
 		for (int i=0; i < tamMax; i = i+(tamMax/numMediciones)) {
 
 			llenaColecciones(i);
 
 			Long iniL = System.nanoTime();
-			lista.contains(i-1);
+			assert true == lista.contains(i-1);
 			Long endL = System.nanoTime();
 
 			Long iniT = System.nanoTime();
-			tabla.contains(i-1);
+			assert true == tabla.contains(i-1);
 			Long endT = System.nanoTime();
 
 			Long iniA = System.nanoTime();
-			arbol.contains(i-1);
+			assert true == arbol.contains(i-1);
 			Long endA = System.nanoTime();
 
 			System.out.println(i+", "+(endL-iniL)+", "+(endT-iniT)+", "+(endA-iniA));
@@ -68,20 +69,20 @@ public class ComplejidadBusqueda {
 	}
 
 	/**
-	 * Se pretende comparar la complejidad algorítmica entre realizar una busqueda
+	 * Se pretende comparar la complejidad algorï¿½tmica entre realizar una busqueda
 	 * por un elemento en:
 	 * 
 	 * - Lista
 	 * - Set implementado como Tabla Hash
 	 * - Set implementado como Arbol Binario de Busqueda
 	 * 
-	 *  Se busca por un elemento que NO estará contenido en la colección
-	 *  (tiene más complejidad que el que está)
+	 *  Se busca por un elemento que NO estarï¿½ contenido en la colecciï¿½n
+	 *  (tiene mï¿½s complejidad que el que estï¿½)
 	 */
 	private static void contieneNoExiste() {
 		
 		System.out.println("Busqueda elem NO existe");
-		System.out.println("Tamaño,lista,mapa,arbol");
+		System.out.println("tamano,lista,mapa,arbol");
 
 		
 		for (int i=0; i < tamMax; i = i+(tamMax/numMediciones)) {
@@ -89,15 +90,15 @@ public class ComplejidadBusqueda {
 			llenaColecciones(i);
 
 			Long iniL = System.nanoTime();
-			lista.contains(i+50);
+			assert false == lista.contains(i+50);
 			Long endL = System.nanoTime();
 
 			Long iniT = System.nanoTime();
-			tabla.contains(i+50);
+			assert false == tabla.contains(i+50);
 			Long endT = System.nanoTime();
 
 			Long iniA = System.nanoTime();
-			arbol.contains(i+50);
+			assert false == arbol.contains(i+50);
 			Long endA = System.nanoTime();
 
 			System.out.println(i+", "+(endL-iniL)+", "+(endT-iniT)+", "+(endA-iniA));
@@ -106,13 +107,13 @@ public class ComplejidadBusqueda {
 		
 	}
 
-	private static void llenaColecciones (int tamaño) {
+	private static void llenaColecciones (int tamano) {
 
 		lista.clear();
 		tabla.clear();
 		arbol.clear();
 
-		for(int i=0; i<tamaño; i++) {
+		for(int i=0; i<tamano; i++) {
 			lista.add(i);
 		}
 
@@ -121,5 +122,9 @@ public class ComplejidadBusqueda {
 		tabla.addAll(lista);
 		arbol.addAll(lista);
 
+		assert tamano == lista.size();
+		assert tamano == tabla.size();
+		assert tamano == arbol.size();
+		
 	}
 }
