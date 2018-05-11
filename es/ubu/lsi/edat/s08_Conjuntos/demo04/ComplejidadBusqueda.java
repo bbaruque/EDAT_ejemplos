@@ -45,7 +45,7 @@ public class ComplejidadBusqueda {
 		System.out.println("Busqueda elem SI existe");
 		System.out.println("tamano,lista,mapa,arbol");
 
-		for (int i=0; i < tamMax; i = i+(tamMax/numMediciones)) {
+		for (int i=2; i < tamMax; i = i+(tamMax/numMediciones)) {
 
 			llenaColecciones(i);
 
@@ -87,24 +87,24 @@ public class ComplejidadBusqueda {
 		System.out.println("tamano,lista,mapa,arbol");
 
 		
-		for (int i=0; i < tamMax; i = i+(tamMax/numMediciones)) {
+		for (int i=2; i < tamMax; i = i+(tamMax/numMediciones)) {
 
 			llenaColecciones(i);
 
 			Long iniL = System.nanoTime();
 			boolean contenido = lista.contains(i+50);
 			Long endL = System.nanoTime();
-			assert (contenido == false);
+			assert (!contenido);
 			
 			Long iniT = System.nanoTime();
 			contenido = tabla.contains(i+50);
 			Long endT = System.nanoTime();
-			assert (contenido == false);
+			assert (!contenido);
 
 			Long iniA = System.nanoTime();
 			contenido = arbol.contains(i+50);
 			Long endA = System.nanoTime();
-			assert (contenido == false);
+			assert (!contenido);
 
 			System.out.println(i+", "+(endL-iniL)+", "+(endT-iniT)+", "+(endA-iniA));
 
