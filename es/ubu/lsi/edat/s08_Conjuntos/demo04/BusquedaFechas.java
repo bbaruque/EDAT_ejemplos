@@ -1,4 +1,4 @@
-package es.ubu.lsi.edat.s08_Conjuntos.demo04;
+package es.ubu.lsi.edat.s08_Conjuntos.demo03;
 
 import java.time.LocalDateTime;
 import java.util.NavigableSet;
@@ -7,7 +7,7 @@ import es.ubu.lsi.edat.datos.GeneradorFechas_8;
 
 public class BusquedaFechas {
 
-	private static NavigableSet<LocalDateTime> conjuntoFechas = new TreeSet<>();
+	private static NavigableSet<LocalDateTime> conjuntoFechas = new TreeSet<LocalDateTime>();
 	
 	public static int iniciaFechas(){
 		
