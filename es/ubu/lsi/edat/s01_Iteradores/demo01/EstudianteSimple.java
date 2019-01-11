@@ -11,12 +11,12 @@ package es.ubu.lsi.edat.s01_Iteradores.demo01;
  * 
  */
 
-class SimpleStudent {
+class EstudianteSimple {
 	
     String name;
     int id;    
         
-    public SimpleStudent( String n, int i )  {
+    public EstudianteSimple( String n, int i )  {
         name = n;
         id = i;
     }

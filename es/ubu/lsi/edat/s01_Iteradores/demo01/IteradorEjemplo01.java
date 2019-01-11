@@ -12,7 +12,7 @@ import java.util.TreeSet;
 /**
  * Test program for lots of collections.
  */
-class IteratorTest01 {
+class IteradorEjemplo01 {
 
 	/**
 	 * Llamadas a los dos tipos de iteracion de ejemplo.
@@ -102,21 +102,21 @@ class IteratorTest01 {
 
 		// Se crean varias COLECCIONES de diferentes tipos para las pruebas.
 		// (Las particularidades de cada tipo de colección se verán más adelante en esta misma asignatura).
-		List<SimpleStudent> stud1 = new ArrayList<SimpleStudent>( );
-		stud1.add( new SimpleStudent( "Bob", 0 ) );
-		stud1.add( new SimpleStudent( "Joe", 1 ) );
-		stud1.add( new SimpleStudent( "Bob", 2 ) ); 
+		List<EstudianteSimple> stud1 = new ArrayList<EstudianteSimple>( );
+		stud1.add( new EstudianteSimple( "Bob", 0 ) );
+		stud1.add( new EstudianteSimple( "Joe", 1 ) );
+		stud1.add( new EstudianteSimple( "Bob", 2 ) ); 
 
 		// Este tipo de Colección necesita que los objetos contenidos se puedan ordenar.
 		// (Se verá como se define esto en la siguiente práctica)
-		Set<SimpleStudent>  stud2 = null;
+		Set<EstudianteSimple>  stud2 = null;
 		try{
-			stud2 = new TreeSet<SimpleStudent>( stud1 );  
+			stud2 = new TreeSet<EstudianteSimple>( stud1 );  
 		}catch(Exception e){
 			System.out.println(e);
 		}
 		
-		Set<SimpleStudent>  stud3 = new HashSet<SimpleStudent>( stud1 ); 
+		Set<EstudianteSimple>  stud3 = new HashSet<EstudianteSimple>( stud1 ); 
 		
 		
 		// Se realiza una prueba de la iteracion en cada coleccion

@@ -18,7 +18,7 @@ import es.ubu.lsi.edat.datos.GeneradorEnteros;
  * @author bbaruque
  *
  */
-public class TestComplejidadRecorrido {
+public class ComplejidadRecorridoTest {
 
 	private final static int tamMax = 100000; 
 	private final static int numMediciones = 10;

@@ -13,7 +13,7 @@ import es.ubu.lsi.edat.s02a_Comparacion.demo01.SimpleStudent;
 /**
  * Test program for lots of collections.
  */
-class OrderingTest {
+class OrderingExample {
 
 	/**
 	 * Metodo que permite el recorrido de CUALQUIER TIPO de coleccion.

@@ -10,7 +10,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class TestUsoConjuntos {
+public class UsoConjuntosTest {
 
 	List<Integer> lista = (List<Integer>) Arrays.asList(1,2,3,4,5,6,6,6,7,8,1,9);
 	List<Integer> listaSub = (List<Integer>) Arrays.asList(1,2,6,6,9,9);

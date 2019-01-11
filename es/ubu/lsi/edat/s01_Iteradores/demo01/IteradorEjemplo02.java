@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class IteratorTest02 {
+public class IteradorEjemplo02 {
 
 	/**
 	 * Metodo que permite realizar el filtrado de objetos en cualquier

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.TreeSet;
 import es.ubu.lsi.edat.datos.GeneradorEnteros;
 
-public class TestUsoSortedSet {
+public class UsoConjuntosOrdenadosTest {
 
 	public static void main(String[] args)	{
 		

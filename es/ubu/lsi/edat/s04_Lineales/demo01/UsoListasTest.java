@@ -13,7 +13,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-public class TestUsoListas {
+public class UsoListasTest {
 
 	List<Integer> listaArrayEnteros;
 	List<Integer> listaEnlazadaEnteros;

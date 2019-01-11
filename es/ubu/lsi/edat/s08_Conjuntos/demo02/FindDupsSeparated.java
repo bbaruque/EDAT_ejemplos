@@ -41,7 +41,7 @@ import java.util.*;
  * Y otro para los elementos que aparezca una única vez
  * 
  */
-public class FindDups2 {
+public class FindDupsSeparated {
     public static void main(String[] args) {
     	
     	// Se instancian cada uno de los conjuntos

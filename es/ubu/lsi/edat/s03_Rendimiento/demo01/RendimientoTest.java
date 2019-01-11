@@ -23,7 +23,7 @@ import org.junit.Test;
  *
  */
 
-public class TestRendimientoSimple {
+public class RendimientoTest {
 
 	// Numero maximo de elementos que se quiere probar a trabajar
 	int limiteElementos = 10000;

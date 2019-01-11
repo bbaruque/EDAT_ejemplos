@@ -19,7 +19,7 @@ import org.junit.Test;
  * @author bbaruque
  *
  */
-public class TestUsoMapas {
+public class UsoMapasTest {
 
 	private HashMap<Integer,String> mapa = new HashMap<Integer,String>(); 
 	

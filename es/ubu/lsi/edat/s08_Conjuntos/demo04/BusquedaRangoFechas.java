@@ -4,16 +4,16 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
-import es.ubu.lsi.edat.datos.GeneradorFechas_8;
+import es.ubu.lsi.edat.datos.GeneradorFechas;
 
-public class BusquedaFechas {
+public class BusquedaRangoFechas {
 
 	private static NavigableSet<LocalDateTime> conjuntoFechas = new TreeSet<LocalDateTime>();
 	
 	public static int iniciaFechas(){
 		
 
-		List<LocalDateTime> listaFechas = GeneradorFechas_8.getFechasAleatorias(10);
+		List<LocalDateTime> listaFechas = GeneradorFechas.getFechasAleatorias(10);
 
 		// Observar como las fechas se geenran de forma ALEATORIA
 
@@ -33,7 +33,7 @@ public class BusquedaFechas {
 		iniciaFechas();
 		
 		// Se prueba a buscar sobre una fecha que NO tiene por que estar incluida en el conjunto
-		LocalDateTime buscada = GeneradorFechas_8.getFechaAleatoria();
+		LocalDateTime buscada = GeneradorFechas.getFechaAleatoria();
 		LocalDateTime anterior = conjuntoFechas.lower(buscada);
 		LocalDateTime posterior = conjuntoFechas.higher(buscada);
 		

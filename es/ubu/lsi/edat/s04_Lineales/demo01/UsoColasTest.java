@@ -1,7 +1,5 @@
 package es.ubu.lsi.edat.s04_Lineales.demo01;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -10,7 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestUsoColas {
+public class UsoColasTest {
 
 	Deque<Integer> colaArrayEnteros;
 	Deque<Integer> colaEnlazadaEnteros;

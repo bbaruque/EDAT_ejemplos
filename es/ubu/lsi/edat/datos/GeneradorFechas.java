@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GeneradorFechas_8 {
+public class GeneradorFechas {
 
 	// Instante actual
 	private static LocalDateTime timePoint = LocalDateTime.now(); 

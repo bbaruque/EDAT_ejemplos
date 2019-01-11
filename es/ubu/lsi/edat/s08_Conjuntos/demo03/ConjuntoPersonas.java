@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class InsercionPersonas {
+public class ConjuntoPersonas {
 
 	public static void main(String[] args) {
 

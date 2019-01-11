@@ -2,7 +2,7 @@ package es.ubu.lsi.edat.s10_ColaPrioridad.demo01;
 
 import java.util.PriorityQueue;
 
-public class PruebaColaPrioridad {
+public class ColaPrioridadEjemplo {
 
 	public static void main(String[] args) {
 

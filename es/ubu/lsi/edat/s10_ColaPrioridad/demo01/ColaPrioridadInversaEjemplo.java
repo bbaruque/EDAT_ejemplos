@@ -3,7 +3,7 @@ package es.ubu.lsi.edat.s10_ColaPrioridad.demo01;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class PruebaColaPrioridad_inversa {
+public class ColaPrioridadInversaEjemplo {
 
 	public static void main(String[] args) {
 
