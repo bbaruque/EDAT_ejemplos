@@ -1,4 +1,4 @@
-package es.ubu.lsi.edat.s03_Rendimiento.demo01;
+package es.ubu.lsi.edat.s03_Rendimiento.demo02;
 
 import static org.junit.Assert.*;
 
@@ -117,6 +117,8 @@ public class RendimientoTest {
 		
 		limiteElementos = 10;
 		
+		// El test va aumentando el tamaño del problema en un bucle infinito.
+		// Es necesario interrumpir la ejecución manualmente para que finaleice la prueba.  
 		while(true){
 			
 			limiteElementos = limiteElementos * 10;

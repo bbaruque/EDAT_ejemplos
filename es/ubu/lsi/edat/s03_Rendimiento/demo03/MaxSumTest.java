@@ -1,4 +1,4 @@
-package es.ubu.lsi.edat.s03_Rendimiento.demo02;
+package es.ubu.lsi.edat.s03_Rendimiento.demo03;
 import java.util.Random;
 
 // This includes additional code not in the text that keeps

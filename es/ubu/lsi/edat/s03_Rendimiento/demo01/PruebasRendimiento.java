@@ -9,9 +9,10 @@ public class PruebasRendimiento {
 	 */
 	static int maximo(int[] A) {
 
-		// Para probar numero de operaciones
+		// Para llevar la cuenta del numero de operaciones
 		int numComp = 0;
 
+		// Bucle extraido de las transparencias de Teoría (Tema 2)
 		int maximoActual = 0;
 
 		for (int i=1; i<A.length; i++) {
@@ -33,6 +34,8 @@ public class PruebasRendimiento {
 	 */
 	static int cuadrado(int n) {
 
+		// Para llevar la cuenta del numero de operaciones
+		// Bucle extraido de las transparencias de Teoría (Tema 2)
 		int sum = 0;
 		for (int i=1; i<=n; i++)
 			for (int j=1; j<=n; j++)
@@ -56,6 +59,7 @@ public class PruebasRendimiento {
 	}
 
 	/**
+	 * Metodo auxiliar que genera un array del tamaño pedido con contenido aleatorio.
 	 * 
 	 * @param tamano
 	 * @return
