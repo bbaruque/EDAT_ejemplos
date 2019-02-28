@@ -1,4 +1,4 @@
-package es.ubu.lsi.edat.s02b_Igualdad.demo01;
+package es.ubu.lsi.edat.s02a_Igualdad.demo01;
 
 import es.ubu.lsi.edat.s02a_Comparacion.demo01.SimpleStudent;
 
