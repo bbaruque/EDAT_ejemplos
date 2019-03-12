@@ -115,17 +115,25 @@ public class RendimientoTest {
 	@Test 
 	public void testIncremental(){
 		
-		limiteElementos = 10;
+		limiteElementos = 100;
 		
-		// El test va aumentando el tamaño del problema en un bucle infinito.
-		// Es necesario interrumpir la ejecución manualmente para que finaleice la prueba.  
+		/* El test va aumentando el tamaño del problema en un bucle infinito.
+		 Es necesario interrumpir la ejecución manualmente para que finalice la prueba.
+		 Esto solo se hace cuando no se conoce bien el tamaño de problema en el que se 
+		 empiecen a apreciar claramente las diferencias en tiempo.
+		 (Ese tamaño puede ser diferente por cada método) */
+		
 		while(true){
 			
 			limiteElementos = limiteElementos * 10;
 			paso = limiteElementos/10;
+
+			System.out.println(String.format("Realizando prueba con %d elementos",limiteElementos));
 			
 			comprobacionDisjuntos();
 			comprobacionNoDisjuntos();
+			
+			System.out.println("Prueba finalizada");
 			
 		}
 		
