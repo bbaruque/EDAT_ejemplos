@@ -13,6 +13,7 @@ public class ColaPrioridadEjemplo {
 		// Se almacenan elementos aleatorios
 		for(int i=0;i<10;i++){
 			colaPrioridad.offer( (char) (Math.random()*26 + 'a') );
+			System.out.println("Contenido cola: "+ colaPrioridad);
 		}
 		
 		// Se comprueba que los elementos preservan un cierto orden. 

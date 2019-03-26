@@ -12,6 +12,7 @@ public class ColaPrioridadInversaEjemplo {
 		
 		for(int i=0; i<10; i++){
 			colaPrioridad_inversa.offer( (char) (Math.random()*26 + 'a') );
+			System.out.println("Contenido cola: "+ colaPrioridad_inversa);
 		}
 		
 		System.out.println("Contenido cola: "+ colaPrioridad_inversa);
