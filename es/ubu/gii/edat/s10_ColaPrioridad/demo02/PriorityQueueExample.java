@@ -13,7 +13,7 @@ public class PriorityQueueExample {
         Queue<Integer> integerPriorityQueue = new PriorityQueue<>(7);
         Random rand = new Random();
         for(int i=0;i<7;i++){
-            integerPriorityQueue.add(new Integer(rand.nextInt(100)));
+            integerPriorityQueue.add(Integer.valueOf(rand.nextInt(100)));
         }
         for(int i=0;i<7;i++){
             Integer in = integerPriorityQueue.poll();

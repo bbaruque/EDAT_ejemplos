@@ -33,8 +33,8 @@ public class ComplejidadRecorridoTest {
 
 			// TODO - Probar a intercambiar uno u otro tipo de lista para la misma iteracion
 			// ¿A que se debe esta diferencia?
-			lista = new ArrayList<Integer> (GeneradorEnteros.listaAleatoria(i));
-//			lista = new LinkedList<Integer> (GeneradorEnteros.listaAleatoria(i));
+//			lista = new ArrayList<Integer> (GeneradorEnteros.listaAleatoria(i));
+			lista = new LinkedList<Integer> (GeneradorEnteros.listaAleatoria(i));
 
 			double ini = System.currentTimeMillis();
 			ComplejidadRecorrido.recorreForYGet(lista);
@@ -48,8 +48,8 @@ public class ComplejidadRecorridoTest {
 
 			// TODO - Probar a intercambiar uno u otro tipo de lista para la misma iteracion
 			// ¿A que se debe esta diferencia?
-			lista = new ArrayList<Integer> (GeneradorEnteros.listaAleatoria(i));
-//			lista = new LinkedList<Integer> (GeneradorEnteros.listaAleatoria(i));
+//			lista = new ArrayList<Integer> (GeneradorEnteros.listaAleatoria(i));
+			lista = new LinkedList<Integer> (GeneradorEnteros.listaAleatoria(i));
 
 			double ini = System.currentTimeMillis();
 			ComplejidadRecorrido.recorreIterador(lista);

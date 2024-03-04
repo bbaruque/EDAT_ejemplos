@@ -1,6 +1,5 @@
 package es.ubu.gii.edat.s00_tutorial.demo02;
 
-import es.ubu.gii.edat.s00_tutorial.demo02.MiClase;
 import junit.framework.TestCase;
 
 public class MiClaseTest extends TestCase{

@@ -1,0 +1,38 @@
+<project name="pruebas-unitarias" default="run-tests">
+
+    <!-- Definir propiedades -->
+    <property name="src.dir" value="."/>
+    <property name="build.dir" value="..\bin"/>
+    <property name="test.dir" value="."/>
+    <property name="lib.dir" value="C:\Program Files\eclipse\plugins"/>
+
+    <!-- Definir ruta de la biblioteca JUnit -->
+    <path id="classpath">
+        <pathelement location="${lib.dir}\org.junit_4.13.2.v20211018-1956.jar"/>
+    	<pathelement location="${lib.dir}\org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        <pathelement location="${build.dir}"/>
+    </path>
+
+    <!-- Definir tarea para compilar el código fuente -->
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+        	<classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <!-- Definir tarea para ejecutar las pruebas unitarias -->
+    <target name="run-tests" depends="compile">
+        <mkdir dir="${build.dir}"/>
+        <junit printsummary="yes" haltonfailure="withOutAndErr" showoutput="true">
+            <classpath refid="classpath"/>
+            <batchtest todir="${build.dir}">
+                <fileset dir="${test.dir}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            	<formatter type="plain" usefile="false"/>
+            </batchtest>
+        </junit>
+    </target>
+
+</project>
